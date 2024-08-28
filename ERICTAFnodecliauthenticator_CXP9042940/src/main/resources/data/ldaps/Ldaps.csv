@@ -1,0 +1,2 @@
+fileName,tlsMode,useTls,expectedMessage
+LDAPS.xml,LDAP,true,"Successfully started a job for configure LDAP operation"

@@ -1,0 +1,39 @@
+<!--
+  ~  *******************************************************************************
+  ~  * COPYRIGHT Ericsson  2019
+  ~  *
+  ~  * The copyright to the computer program(s) herein is the property of
+  ~  * Ericsson Inc. The programs may be used and/or copied only with written
+  ~  * permission from Ericsson Inc. or in accordance with the terms and
+  ~  * conditions stipulated in the agreement/contract under which the
+  ~  * program(s) have been supplied.
+  ~  *******************************************************************************
+  ~
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Node CLI Authentication UI (P4) - Hydra">
+    <listeners>
+        <listener class-name="com.ericsson.oss.testware.scenario.TestReportObject"/>
+    </listeners>
+    <parameter name="SuiteNodeTypes" value="CCRC,CCPC,CCSM,CCDM"/>
+    <test name="Setup and NodeCLI_Authent Test">
+        <classes>
+            <class name="com.ericsson.oss.services.nodecli.testware.scenarios.SetupAndTeardownScenario"/>
+        </classes>
+    </test>
+<!-- Test Parameters and TestCase class -->
+    <test name="NodeCLI_Authent Test">
+        <classes>
+            <class name="com.ericsson.oss.services.nodecli.testware.scenarios.NodeCLIAutenticathorScenario">
+                <methods>
+                    <include name="ldapDisabledSooDisabledScenario"/>
+                    <include name="ldapDisabledSooDisabledNodeCliUserScenario"/>
+                    <include name="ldapDisabledSooEnabledScenario"/>
+                    <include name="ldapEnabledSooDisabledScenario"/>
+                    <include name="ldapEnabledSooEnabledScenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

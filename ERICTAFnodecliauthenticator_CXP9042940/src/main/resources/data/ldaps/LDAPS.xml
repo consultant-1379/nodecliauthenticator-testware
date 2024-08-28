@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Nodes>
+    <Node>
+        <nodeFdn>%s</nodeFdn>
+        <tlsMode>%s</tlsMode>
+        <userLabel>Hydra</userLabel>
+        <useTls>true</useTls>
+    </Node>
+</Nodes>
